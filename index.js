@@ -7,6 +7,7 @@ if (idade >= 18){
  console.log('Parabéms, ' + nome)
  console.log('Você é o klica')
 }
+
 console.log('Até mais ' + nome)
 
 // // possível redeclarar variáveis, mas não é o ideal (com var)
