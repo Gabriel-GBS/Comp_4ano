@@ -1,4 +1,5 @@
-// JS não preve algns erros no compilador, além da redeclaração, podemos chamar uma váriavel não declarada antes, como no ex abaixo (com var)
+// JS não preve algns erros no compilador, além da redeclaração, 
+//podemos chamar uma váriavel não declarada antes, como no ex abaixo (com var)
 var idade = 18
 console.log('Oi, ' + nome)
 if (idade >= 18){
