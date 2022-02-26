@@ -70,15 +70,27 @@
 // })
 // console.log(resultado)
 
-const valores = [1, 2, 3, 4]
-const soma = valores.reduce((ac, atual) => {
-    return ac+atual
-})
-console.log(soma)
+// //soma de valores
+// const valores = [1, 2, 3, 4]
+// const soma = valores.reduce((ac, atual) => {
+//     return ac+atual
+// })
+// console.log(soma)
 
 
+//definição de função
+function hello(){
+    console.log("oi")
+}
 
+//chamada da função, ou seja, ponto em que ela é colocada em execução
+hello()
 
+function hello(nome){
+    console.log("Oi, " + nome)
+}
+
+hello("José")
 
 
 
