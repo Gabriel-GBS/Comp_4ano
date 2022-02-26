@@ -7,7 +7,6 @@ if (idade >= 18){
  console.log('Parabéms, ' + nome)
  console.log('Você é o klica')
 }
-
 console.log('Até mais ' + nome)
 
 // // possível redeclarar variáveis, mas não é o ideal (com var)
@@ -31,6 +30,11 @@ console.log('Até mais ' + nome)
 // //var - basicamente igual ao let - escopos diferentes - var pouco intuitivo
 // var c = 2+3
 // var d = 'abcd'
+
+// ==  comparação com coerção implícita, ou seja, leva em conta somente os valores e não os tipos (1 == '1' /true)
+// === comparação sem coerção implícita, ou seja, leva em consideração os valores e os tipos (1 === '1' /false)
+
+
 
 
 
