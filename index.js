@@ -38,30 +38,43 @@
 // ==  comparação com coerção implícita, ou seja, leva em conta somente os valores e não os tipos (1 == '1' /true)
 // === comparação sem coerção implícita, ou seja, leva em consideração os valores e os tipos (1 === '1' /false)
 
-const nomes = [
-    "Ana Maria",
-    "Antonio",
-    "Rodrigo",
-    "Alex",
-    "Cristina"
-]
+// const nomes = [
+//     "Ana Maria",
+//     "Antonio",
+//     "Rodrigo",
+//     "Alex",
+//     "Cristina"
+// ]
 
-//encontrar nomes que começam com A
+// //encontrar nomes que começam com A
 
+// console.log("Apenas nomes com A:")
 // const apenasA = nomes.filter((n) => {
 //     return n.startsWith("A")
 // })
-// console.log(apenasA)
+// console.log(apenasA + "\n")
 
-//mapear palavras
-//[A, A, R, A, C]
+// //mapear palavras
+// //[A, A, R, A, C]
 
-const mapeamento = nomes.map((nome) =>{
-    return nome.charAt(0)
+// console.log("Iniciais dos nomes:")
+// const mapeamento = nomes.map((nome) =>{
+//     return nome.charAt(0)
+// })
+// console.log(mapeamento + "\n")
+
+// //verificar se todos os valores cumprem a condição
+
+// const resultado = nomes.every((n) => {
+//     return n.startsWith("A")
+// })
+// console.log(resultado)
+
+const valores = [1, 2, 3, 4]
+const soma = valores.reduce((ac, atual) => {
+    return ac+atual
 })
-console.log(mapeamento)
-
-
+console.log(soma)
 
 
 
