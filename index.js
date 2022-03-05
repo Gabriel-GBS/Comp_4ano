@@ -78,21 +78,47 @@
 // console.log(soma)
 
 
-//definição de função
-function hello(){
-    console.log("oi")
+// //definição de função
+// function hello(){
+//     console.log("oi")
+// }
+
+// //chamada da função, ou seja, ponto em que ela é colocada em execução
+// hello()
+
+// function hello(nome){
+//     console.log("Oi, " + nome)
+// }
+
+// hello("José")
+
+//closure
+// function f(){
+//     let nome = 'João'
+//     function g(){
+//         console.log(nome)
+//     }
+//     g()
+// }
+// f()
+
+//devolver uma nova coleção que possui todos os elementos de v 
+//que fazem com que f produza true
+function filter (v, f){
+    const g = []
+    for(n = 0; n < v.length; n++){
+        if(f(v[n])){
+        g.push(v[n])   
+       }
+   } return g
 }
+console.log(filter ([1, 2, 3], e => e % 2 === 0))
 
-//chamada da função, ou seja, ponto em que ela é colocada em execução
-hello()
-
-function hello(nome){
-    console.log("Oi, " + nome)
-}
-
-hello("José")
-
-
+//produzir uma coleção nova que,
+//para cada elemento v[i] possui o valor resultante f(v[i])
+// function map (v, f){
+// }
+// console.log(map (['abcd', 'abc'], e => e.length))
 
 
 
