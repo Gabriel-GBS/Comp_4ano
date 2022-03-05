@@ -93,6 +93,7 @@
 // hello("José")
 
 //closure
+
 // function f(){
 //     let nome = 'João'
 //     function g(){
@@ -102,30 +103,48 @@
 // }
 // f()
 
-//devolver uma nova coleção que possui todos os elementos de v 
-//que fazem com que f produza true
-function filter (v, f){
-    const g = []
-    for(n = 0; n < v.length; n++){
-        if(f(v[n])){
-        g.push(v[n])   
-       }
-   }console.log('os valores que cumprem a função são:') 
-   return g
-}
-console.log(filter ([1, 2, 3], e => e % 2 === 0) + '\n')
+// //devolver uma nova coleção que possui todos os elementos de v 
+// //que fazem com que f produza true
 
-//produzir uma coleção nova que,
-//para cada elemento v[i] possui o valor resultante f(v[i])
+// function filter (v, f){
+//     const g = []
+//     for(n = 0; n < v.length; n++){
+//         if(f(v[n])){
+//         g.push(v[n])   
+//        }
+//    }console.log('os valores que cumprem a função são:') 
+//    return g
+// }
+// console.log(filter ([1, 2, 3], e => e % 2 === 0) + '\n')
 
-function map (v, f){
-    const g = []
-    for(n = 0; n < v.length; n++){
-        g.push(f(v[n]))
-    }console.log('os tamanho das palavras são respectivamente:')
-    return g
-}
-console.log(map (['abcd', 'abc'], e => e.length) + '\n')
+// //produzir uma coleção nova que,
+// //para cada elemento v[i] possui o valor resultante f(v[i])
+
+// function map (v, f){
+//     const g = []
+//     for(n = 0; n < v.length; n++){
+//         g.push(f(v[n]))
+//     }console.log('os tamanho das palavras são respectivamente:')
+//     return g
+// }
+// console.log(map (['abcd', 'abc'], e => e.length) + '\n')
+
+// function eAgora (){
+//     let cont = 1
+//     function f1 (){
+//         console.log(cont)
+//     }
+//     cont ++
+//     function f2(){
+//         console.log(cont)
+//     }
+//     //isso é um objeto JSON
+// return{f1, f2}
+// }
+
+// let res = eAgora()
+// res.f1()
+// res.f2()
 
 
 
