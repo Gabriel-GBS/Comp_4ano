@@ -242,6 +242,9 @@ const res2 = calculoDemorado(-1)
 .then((resultado) => console.log(resultado))
 .catch((erro) => console.log ('Falhou: ' + erro))
 
+function calculoRapidinho (numero){
+    return Promise.resolve((numero * (numero + 1))/ 2)
+}
 
-
+calculoRapidinho (2).then(res => console.log(res))
 
