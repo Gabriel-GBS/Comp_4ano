@@ -53,11 +53,11 @@
 
 // console.log(c.veiculos[0].revisoes[1].consultor)
 
-const calc = {
-    soma: (a, b) => a+b,
-    subtracao: function (a, b) {return a - b},
-    multiplicacao: (a,b) => a*b
-}
-console.log(calc.soma(2,3))
-console.log(calc.subtracao(2,3))
-console.log(calc.multiplicacao(2,3))
+// const calc = {
+//     soma: (a, b) => a+b,
+//     subtracao: function (a, b) {return a - b},
+//     multiplicacao: (a,b) => a*b
+// }
+// console.log(calc.soma(2,3))
+// console.log(calc.subtracao(2,3))
+// console.log(calc.multiplicacao(2,3))

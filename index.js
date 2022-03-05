@@ -145,3 +145,80 @@
 // let res = eAgora()
 // res.f1()
 // res.f2()
+
+//sequencial
+
+// const a = 2 + 7
+// const b = 5
+// const c = a + b
+// console.log(c)
+
+//não sequencial
+
+// function demorada(){
+//     const atualMais2Segundos = new Date().getTime() + 2000
+//     while(new Date().getTime() <= atualMais2Segundos);
+//     const d = 8 + 4
+//     return d
+// }
+
+// const a = 2 + 3
+// const b = 5 + 9
+// setTimeout(function(){  //define tempo de espera para executar, ou seja, foi "agendada" para ocorer 0.5s depois
+//     const d = demorada()
+//     console.log(d)
+// }, 500)
+// const e = a + b
+// console.log(e)
+
+// const a = 2 + 3
+// const b = 5 + 9
+// const d = demorada()
+// console.log(d)
+// const e = a + b + 2
+// console.log(e)
+
+//ordenando com setTimeout
+
+// setTimeout(function(){
+//     console.log('Dentro da timeout 1')
+// }, 500)
+// setTimeout(function(){
+//     console.log('Dentro da timeout 2')
+// }, 0)
+
+//com o setTimeout agendamos a execução, neste caso, esta será exeutada depois da umSegundoNoFuturo
+
+// setTimeout(function(){
+//     console.log('Dentro da timeout')
+// }, 0)
+
+// const umSegundoNoFuturo = new Date().getTime() + 5000
+// while (new Date().getTime() <= umSegundoNoFuturo);
+// console.log('Fora da timeout')
+
+//funções callback
+
+//codigo horrivel - inferno de callback`s
+const fs = require ('fs')
+const abrirArquivo = function(nomeArquivo){
+    const exibirConteudo = function (erro, conteudo){
+        if(erro)
+            console.log(`Deu erro: ${erro}`)
+        else{
+            console.log(`Conteúdo: ${conteudo.toString()}`)
+            const triplo = conteudo.toString() * 3
+            const finalizar = (erro) => {
+                if(erro)
+                    console.log('Erro ao salvar o triplo')
+                else   
+                    console.log('Salvou com sucesso')
+            }
+            fs.writeFile('triplo.txt', triplo.toString(), finalizar)
+        }
+    }
+    fs.readFile(nomeArquivo, exibirConteudo)
+}
+abrirArquivo('arquivo.txt')
+
+
