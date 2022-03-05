@@ -200,25 +200,48 @@
 //funções callback
 
 //codigo horrivel - inferno de callback`s
-const fs = require ('fs')
-const abrirArquivo = function(nomeArquivo){
-    const exibirConteudo = function (erro, conteudo){
-        if(erro)
-            console.log(`Deu erro: ${erro}`)
-        else{
-            console.log(`Conteúdo: ${conteudo.toString()}`)
-            const triplo = conteudo.toString() * 3
-            const finalizar = (erro) => {
-                if(erro)
-                    console.log('Erro ao salvar o triplo')
-                else   
-                    console.log('Salvou com sucesso')
-            }
-            fs.writeFile('triplo.txt', triplo.toString(), finalizar)
-        }
-    }
-    fs.readFile(nomeArquivo, exibirConteudo)
+// const fs = require ('fs')
+// const abrirArquivo = function(nomeArquivo){
+//     const exibirConteudo = function (erro, conteudo){
+//         if(erro)
+//             console.log(`Deu erro: ${erro}`)
+//         else{
+//             console.log(`Conteúdo: ${conteudo.toString()}`)
+//             const triplo = conteudo.toString() * 3
+//             const finalizar = (erro) => {
+//                 if(erro)
+//                     console.log('Erro ao salvar o triplo')
+//                 else   
+//                     console.log('Salvou com sucesso')
+//             }
+//             fs.writeFile('triplo.txt', triplo.toString(), finalizar)
+//         }
+//     }
+//     fs.readFile(nomeArquivo, exibirConteudo)
+// }
+// abrirArquivo('arquivo.txt')
+
+//promises
+
+function calculoDemorado(numero){
+    const p = new Promise (function (resolve, reject){
+        let res = 0
+        for (let i = 1; i <= numero; i++)
+            res += i
+        resolve(res)
+    })
+    return p
+
 }
-abrirArquivo('arquivo.txt')
+const res = calculoDemorado (100)
+res
+.then((resultado) => console.log(resultado))
+.catch((erro) => console.log ('Falhou: ' + erro))
+
+const res2 = calculoDemorado(-1)
+.then((resultado) => console.log(resultado))
+.catch((erro) => console.log ('Falhou: ' + erro))
+
+
 
 
